@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BOXCINEMAS</title>
+    <style>
+      input[type="text"] {
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      button {
+        width: 120px;
+        height: 30px;
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #d4d6d4;
+        color: black;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #babdba;
+      }
+      table {
+      width: 20%;
+      border: solid 1px ;
+      }
+      th, td {
+        border: 1px solid;
+      }
+      section[id="mainForm"] {
+        border: 1px solid;
+      }
+      section[id="ClienteForm"]{
+        border: 1px solid;
+      }
+
+    </style>
+  </head>
+  <body> 
+    <section id="mainForm">
+      <h3>BOXCINEMAS</h3>
+      <table id="mainForm_tabla">
+        <tr>
+          <th>Familia</th>
+          <th>Personas</th>
+          <th>Dia</th>
+          <th>Montoapagar</th>
+        </tr>
+      </table>
+      <h5>cantidad de dinero en caja: $.<span id="mainForm_lblDineroinicial">?</span></h5>
+      <h5>Familia que pago mas: <span id="mainForm_lblFamiliaquepagomas">?</span></h5>
+      <h5>Promedio pagado los dias lunes: $<span id="mainForm_lblPrompagodiaslunes">?</span></h5>
+      <h5>Total de dinero al final de la jornada: $<span id="mainForm_lblTotalfinal">?</span></h5>
+      <button id="mainForm_btAgregar">Agregar Cliente</button>
+    </section><br>
+
+    <section id="ClienteForm">
+      <h3>Datos Cliente</h3>
+      <input type="text" id="ClienteForm_inFamilia" placeholder="Familia"></input>
+      <input type="text" id="ClienteForm_inPersonas" placeholder="Personas"></input>
+      <input type="text" id="ClienteForm_inDia"  placeholder="Dia"></input>
+      <button id="ClienteForm_btAceptar">Aceptar</button> 
+    </section>
+  </body>
+    <script type="module">
+    import Cl_controlador from "./js/Cl_controlador.js"
+    new Cl_controlador ();
+ </script>
+</html>
